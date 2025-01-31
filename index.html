@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <nav>
+      <div class="company-name">CurrCon </div>
+      <div class="language-dropdown">
+        <button class="btn-nav">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI8qqGLjTp1RXrU7aOKJC4u0SXVCoabiJfoB6UB9YnV5ACZlRPXIjaTueFqdZ4VTqJjNg&usqp=CAU"
+            alt="World Icon"> <span>ENGLISH</span> </button>
+        <div class="dropdown-content">
+          <a href="#">English</a>
+          <a href="#">Spanish</a>
+          <a href="#">French</a>
+        </div>
+      </div>
+    </nav>
+    <h3>Currency Converter</h3>
+
+    <div class="container">
+
+      <div class="converter">
+
+        <select id="fromCurrency"></select>
+        <span>to</span>
+
+        <select id="toCurrency"></select>
+        <input type="number" id="amount" placeholder="Amount" />
+        <button id="convertBtn">Convert</button>
+        <a href="index.html"><button id="convertBtn" >Reset</button></a>
+        
+      </div>
+      <h2 id="result"></h2>
+      <a onclick="printpage()" class="print">Click to Print
+      </a>
+      <svg xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 512 512" class="print-icon"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path
+          d="M128 0C92.7 0 64 28.7 64 64l0 96 64 0 0-96 226.7 0L384 93.3l0 66.7 64 0 0-66.7c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0L128 0zM384 352l0 32 0 64-256 0 0-64 0-16 0-16 256 0zm64 32l32 0c17.7 0 32-14.3 32-32l0-96c0-35.3-28.7-64-64-64L64 192c-35.3 0-64 28.7-64 64l0 96c0 17.7 14.3 32 32 32l32 0 0 64c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-64zM432 248a24 24 0 1 1 0 48 24 24 0 1 1 0-48z" /></svg>
+    </div>
+  </body>
+  <footer>
+    <p> © 2025 My Website. All rights reserved. </p>  
+        <p> Contact: currcon@mywebsite.com </p>  
+        
+  </footer>
+  <script src="script.js"></script>
+</html>
