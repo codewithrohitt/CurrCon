@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Ubuntu:wght@400&display=swap');
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", serif;
+font-weight: 200;
+font-style: normal;
+font-size: 20px;
+
+}
+
+/* Navbar */
+
+nav {
+  background-color: #dcdcdc; /* Dark background color */
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between; /* Align items to left and right */
+  align-items: center; /* Vertically center items */
+}
+
+.company-name {
+  font-weight: bold;
+  font-size: 2em;
+  padding: auto;
+  margin-left: 50px;
+  color: rgb(104, 113, 114);
+}
+
+.language-dropdown {
+  position: relative; /* Needed for positioning the dropdown */
+  display: inline-block; /* Allow dropdown to be inline with other elements */
+}
+
+.language-dropdown button {
+  background: rgb(163, 173, 174);  /* Remove default button background */
+  border-radius: 20px;
+        /* Remove default button border */
+  color: rgb(244, 245, 245);
+  cursor: pointer;
+  display: flex; /* Use flexbox for icon and text alignment */
+  align-items: center; /* Vertically align icon and text */
+}
+
+.language-dropdown img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px; /* Add some spacing between icon and text */
+}
+
+
+.dropdown-content {
+  display: none; /* Initially hide the dropdown */
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1; /* Ensure dropdown is on top */
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block; /* Make each link a block element */
+}
+
+.dropdown-content a:hover {
+  background-color: #8a8787;
+}
+.btn-nav:hover{
+  background-color: #8a8787;
+}
+
+.language-dropdown:hover .dropdown-content {
+  display: block; /* Show dropdown on hover */
+}
+
+/* Media Query for responsiveness */
+@media (max-width: 768px) {  /* Example breakpoint */
+  nav {
+      flex-direction: column; /* Stack items vertically */
+      align-items: flex-start;  /* Align items to the left */
+  }
+
+  .language-dropdown {
+      margin-top: 10px;
+      margin-left: 50px; /* Add spacing between items on smaller screens */
+  }
+}
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h3 {
+  color: #333;
+
+   font-size: 40px;
+   text-decoration:underline;
+  
+  text-align: center;
+}
+
+
+.converter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input, select, button {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 150px;
+}
+
+button {
+  background-color: #1e0f70;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2f42af;
+}
+
+h2 {
+  color: #333;
+}
+.print{
+  margin-left: 450px;
+  color: blue;
+  cursor: pointer;
+  font-size: medium;
+}
+.print-icon{
+  position: relative;
+  bottom: 19px;
+  margin-left: 320px;
+  height: 20px;
+  width: 20px;
+}
+footer {  
+  background-color: #dcdcdc;  
+  color: rgb(104, 113, 114);  
+  padding: 10px;  
+  text-align: center;  
+  position: absolute;  
+  bottom: 0;  
+  width: 100%;  
+}  
+
+
+@media (max-width: 480px) {
+  body {
+    font-size: 16px; /* Smaller font size for mobile */
+  }
+
+  .company-name {
+    font-size: 1.5em; /* Adjust company name size */
+    margin-left: 20px; 
+    text-align: center;/* Reduce margin */
+  }
+
+  .language-dropdown {
+    margin-left: 20px; /* Reduce margin for dropdown */
+  }
+
+  .print {
+    margin-left: 20px; /* Center print button */
+    font-size: small; 
+    /* Smaller font size */
+  }
+  .print-icon{
+    margin-left: 45px;
+    position: relative;
+  top: 5px;
+  right: 150px;
+
+  .converter {
+    flex-direction: column; /* Stack converter elements */
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+  }
+
+  .language-dropdown {
+    margin-top: 10px; /* Add spacing between items */
+    margin-left: 20px; /* Adjust margin */
+  }
+
+  .container {
+    margin: 20px; /* Reduce margin for container */
+    padding: 15px; /* Adjust padding */
+  }
+
+  h3 {
+    font-size: 30px; /* Smaller heading size */
+  }
+
+  input, select, button {
+    max-width: 100%; /* Full width on smaller screens */
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 800px; /* Increase max width for larger screens */
+  }
+
+  h3 {
+    font-size: 50px; /* Larger heading size */
+  }
+
+  .converter {
+    flex-direction: row; /* Align converter elements in a row */
+    justify-content: space-between; /* Space out elements */
+  }
+  .print{
+    margin-left: 20px;
+    text-align: center;
+  }
+  .print-icon{
+    margin-left: 20px;
+    position: relative;
+  top: 5px;
+  right: 150px;
+
+  }
+}
+}
